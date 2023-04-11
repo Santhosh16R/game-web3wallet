@@ -8,7 +8,7 @@ let signer;
 document.addEventListener("DOMContentLoaded", loadApp());
 
 async function loadApp() {
-  provider = new ethers.providers.Web3Provider(window.okxwallet, "testnet");
+  provider = new ethers.providers.Web3Provider(window.okxwallet, "any");
   signer = provider.getSigner();
   if (!signer) window.location.reload();
   await provider.send("eth_requestAccounts", []);
