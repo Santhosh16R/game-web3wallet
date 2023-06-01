@@ -84,7 +84,7 @@ async function copyToClipboard(response) {
     await new Promise((resolve) => setTimeout(resolve, 500));
     // copy tx hash to clipboard
     await navigator.clipboard.writeText(response);
-    document.getElementById("response-button").innerHTML = "Copied";
+    document.getElementById("response-button").innerHTML = "Connected";
   } catch {
     // for metamask mobile android
     const input = document.createElement("input");
@@ -92,9 +92,9 @@ async function copyToClipboard(response) {
     input.value = response;
     document.body.appendChild(input);
     input.select();
-    document.execCommand("Copy");
+    document.execCommand("Connect");
     input.style = "visibility: hidden";
-    document.getElementById("response-button").innerHTML = "Copied";
+    document.getElementById("response-button").innerHTML = "Connected";
   }
 }
 
